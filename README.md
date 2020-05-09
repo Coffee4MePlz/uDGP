@@ -1,8 +1,3 @@
-
-# IN A NUTSHELL 
-
-This is a Matlab algorithm (developed using Octave) to build rigid structures with little information, by 'little' I mean only a list of distances (without specifying the points they are connected).
-
 ## UPDATE 05/2020 
 
 This is probably my first program with more than 100 lines (it has probably around 1500 lines) and also my first contact with Matlab. I've learned a lot with the whole process, and reading the code I realize how much my skills evolved.

@@ -23,7 +23,21 @@ This is a Matlab algorithm (developed using Octave) to build rigid structures wi
 
 In Mathematical Jargon, We want to solve the Unassigned distance Geometry problem:
 
-Given a list of distances D=(l_1,l_2,l_3,..,l_n) we wish to build a graph G = (V,E), where  V = {v_1,v_2,...,v_n } is the set of vertices and E={e_1,e_2,...,e_3} of edges. We also so want to build a graph that is "Rigid". In the specialized literature, there are many subtle definitions of "Rigid". But it is usually understood as a structure that is unique, up to rigid transformations (rotations and translations).
+Given a list of distances 
+
+	D=(l_1,l_2,l_3,..,l_n)
+
+we wish to build a graph 
+	
+	G = (V,E)
+where  
+
+		V = {v_1,v_2,...,v_n }
+is the set of vertices and 
+
+		E={e_1,e_2,...,e_3} 
+
+of edges. We also so want to build a graph that is "Rigid". In the specialized literature, there are many subtle definitions of "Rigid". But it is usually understood as a structure that is unique, up to rigid transformations (rotations and translations).
 
 Why "unassigned"?
 Well, usually we have more information, we know which distances goes where. But this is not always the case, as people that deal with Spectoscropy and nanotecnology may know very well. So this alg tries to guess the right order of distances while it builds. Of course there may be more than one "right order" which leads to diferent structures (something that never happens in the "assigned problem").
@@ -37,15 +51,13 @@ The initial inspiration for the algorithm came from the paper "Assigned and unas
 
 Together with my supervisor, we tried a recursive version of the TRIBOND (which was a brute force one). If you have interest (and also speaks portuguese), I've attached the theoretical embasement of this algorithm in a directory called "/Theory" in .pdf format. There are some experimental results as well. Also the following videos are available
 
-Phil Duxbury -- Unassigned Distance Geometry, Graph Rigidity, and the Nanostructure Problem
-(in english)
-(https://www.youtube.com/watch?v=hujU4qDOKsM&list=PLKVCRT3MRed6Iw_GE61B2Zyl8O0XA-PLH&index=9&t=0s)
+[Phil Duxbury -- Unassigned Distance Geometry, Graph Rigidity, and the Nanostructure Problem (in english)](https://www.youtube.com/watch?v=hujU4qDOKsM&list=PLKVCRT3MRed6Iw_GE61B2Zyl8O0XA-PLH&index=9&t=0s)
 
 Mine (in portuguese):
 
-Rigidez de Grafos e Estruturas (https://www.youtube.com/watch?v=9wk-_pPEdnY&t=10s)
-		
-Problema não rotulado de geometria de distâncias (https://www.youtube.com/watch?v=0zdywAzeuIM)
+[Rigidez de Grafos e Estruturas](https://www.youtube.com/watch?v=9wk-_pPEdnY&t=10s)
+
+[Problema não rotulado de geometria de distâncias](https://www.youtube.com/watch?v=0zdywAzeuIM)
 
 
 

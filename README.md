@@ -42,9 +42,13 @@ Phil Duxbury -- Unassigned Distance Geometry, Graph Rigidity, and the Nanostruct
 		https://www.youtube.com/watch?v=hujU4qDOKsM&list=PLKVCRT3MRed6Iw_GE61B2Zyl8O0XA-PLH&index=9&t=0s
 
 Mine (in portuguese)
+
 	Rigidez de Grafos e Estruturas
+	
 		https://www.youtube.com/watch?v=9wk-_pPEdnY&t=10s
+		
 	Problema não rotulado de geometria de distâncias
+	
 		https://www.youtube.com/watch?v=0zdywAzeuIM
 
 

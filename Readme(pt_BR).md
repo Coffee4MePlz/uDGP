@@ -2,12 +2,17 @@
 
 %%%%%%		Guia do algoritmo		%%%% DATA 09/2019
 
+# RESUMIDAMENTE # 
+
+Este é um algoritmo em Matlab(feito no Octave) para construir estruturas rígidas com pouca informação, isto é somente uma lista de distancias (sem especificar os pares de pontos a que pertence).
 
 
-##### UPDATE 05/2020 ####
+#### UPDATE 05/2020 ###
 
 Este é provavelmente meu primeiro programa com mais de 100 linhas (ele deve ter em torno de 1500 linhas) e minha primeira experiência com Matlab, aprendi muito com o processo, e olhando de novo para ele vejo hoje como evolui. De fato, não recomendo o uso deste algoritmo, mas ele pode servir como inspiração para começar do zero e fazer algo mais limpo. Pense nele como um guia de trilha que só fez a trilha uma vez. 
 
+Este algoritmo é o resultado de uma pesquisa de dois anos. 1,5 anos em pesquisa puramente teórica matemática, e 1/2 ano de programação. Tudo foi realizado com ajuda do meu orientador e duas bolsas de pesquisa PIBIC, financiadas pelo CNPq.
+ 
 _____________________________________________________
 _____________________________________________________ 
 
@@ -31,20 +36,26 @@ Resolvi, conjuntamente com meu orientador, atacar esse algoritmo de uma maneira 
 
 Phil Duxbury -- Unassigned Distance Geometry, Graph Rigidity, and the Nanostructure Problem
 (in english)
+
 		https://www.youtube.com/watch?v=hujU4qDOKsM&list=PLKVCRT3MRed6Iw_GE61B2Zyl8O0XA-PLH&index=9&t=0s
+
 
 Meus (em portugues)
 	Rigidez de Grafos e Estruturas
+
 		https://www.youtube.com/watch?v=9wk-_pPEdnY&t=10s
+
 	Problema não rotulado de geometria de distâncias
+
 		https://www.youtube.com/watch?v=0zdywAzeuIM
 
 
 
 
-
+_______________________________________
 ________________________________________
 
+## INPUT ## 
 
 A entrada da função é usando a função Rotina(), ou voce pode diretamente usar a função DistCoreArranjo, apesar de ela ter muitas entradas. Já a função Rotina() só tem duas
 
@@ -58,10 +69,10 @@ Importante ressaltar, devido ao fim precoce do projeto, o algoritmo só funciona
 
 onde |V| é a cardinalidade de V, o conjunto dos vértices do grafo.
 
-
+_______________________________________
 _______________________________________
 
-### *obs1: ###
+### *obs1: ### MAIS DE 6 PONTOS 
  O código parece ter problemas para configurações com mais de 5 pontos. Apesar de funcionar para o hexágono (6 pontos). Ao fazer os testes para mais de 5 pontos em geral criava uma de 5 pontos e então aplicava rotações para duplicar a estrutura em outro ângulo pela função Rotate. Da seguinte maneira:
 
 	Pontos1 = rand(2,5)
@@ -70,7 +81,7 @@ _______________________________________
 Assim, Pontos2 tem 10 pontos. Por alguma razão, estas estruturas sempre funcionaram. 
 
 
-### *obs2: ###
+### *obs2: ### PLOTANDO GRAFOS
 Para plotar a estrutura encontrada, vá em NewPoint2, lá tem uma função comentada "PlotESave". Essa função faz um plot de um grafo de maneira muito inteligente e salva em um diretório específico. Ele plota por meio de uma matriz de adjacência (aqui a variável é "Adj"). Como nossos grafos são completos a matriz é somente uma matriz de ums com zeros na diagonal. 
 A idéia era posteriormente trabalhar com grafos não completos e ir montando a matriz de adjacência junto com a estrutura, e então possibilitar o plot de maneira mais inteligente. 
 
@@ -102,7 +113,7 @@ ___________________________________________________________
 
 
 
-#%%%%%%%%%%%          PASSO A PASSO 		%%%%%%%%%%%
+##  PASSO A PASSO // FLOW ##
 
 
 
@@ -117,7 +128,7 @@ Explicação de cada função em ordem de aparecimento:
 
 _____1 Excecute o script Rotina.m
 
-	Rotina(Points)
+	Rotina(Points,Dist0)
 
 esse script tem nele a definição das distâncias em "Dist"
 e chama o algoritmo principal "DistcoreArranjo"
@@ -164,9 +175,6 @@ Dist2= distancias atuais, Core= Nosso Core atual, L = escolha de distancias a se
 
 Esta função monta nosso sistema linear, testa o determinante da matriz do sistema, e depois testa a ultima equação não usada no sistema.
 
-###comentado
-#Se passa ambos testes, então printa "FOUND:" e dá o estado atual da nossa realização.
-
 subtrai o numero de pontos p=p-1
 
 Chama a Função DistcomNewAtom com o Core atual na variavel "Build" e com "fwd=0"
@@ -194,14 +202,13 @@ Os pontos que não estão selecionados ficam na variável "NotCore"
 Monta um sistema linear como em Newpoint, verifica as mesmas condições
 
 
-
-	________ 10.1 CheckDist (x4, NotCore, Dist3)
+________ 10.1 CheckDist (x4, NotCore, Dist3)
 
 		
-		Testa as distâncias remanescentes "Dist3" com os pontos	
-		remanescentes "NotCore" e o ponto novo "x4"
+	Testa as distâncias remanescentes "Dist3" com os pontos	
+	remanescentes "NotCore" e o ponto novo "x4"
 		
-		Atualiza Dist3
+	Atualiza Dist3
 
 
 Retira um ponto do contador p=p-1
@@ -214,9 +221,9 @@ Para Plotar basta descomentar a função de plot PlotESave aqui
 
 
 
-	_________ 10.2 PlotESave (Build)
-
-		Faz um plot da estrutura montada. Ver observação 2.
+_________ 10.2 PlotESave (Build)
+	
+	Faz um plot da estrutura montada. Ver observação 2.
 
 
 Return Build

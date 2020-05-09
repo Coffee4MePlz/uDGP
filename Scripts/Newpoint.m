@@ -49,6 +49,7 @@ d34= Distu(1,3);
     fwd = 1;
     [L, Build, BuildRepos] = DistCombNewAtom (1, 4 ,p, 3, [1,2,3],[], Dist3, Build, BuildRepos, fwd, [], Build ,0);
   else 
+    Build
     return
   end
   

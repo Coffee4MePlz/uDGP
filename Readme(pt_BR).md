@@ -1,6 +1,6 @@
 
 
-%%%%%%		Guia do algoritmo		%%%% DATA 09/2019
+DATA 09/2019
 
 # RESUMIDAMENTE # 
 

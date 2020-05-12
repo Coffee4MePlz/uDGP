@@ -97,7 +97,9 @@ There is a plotting function for graphs, in the NewPoint2 Script, it's called "P
 
 Another issue with plotting. I could not make it plot only when a new strucutre appeared, so, there is A LOT of plotting. As a newbie I would open the debugger and set a breakpoint on the PlotESave function, and runned the code under my control (yes, bad choices, but I had to deliver!). For this reason PlotESave is commmented out.
 
+### *obs3: FLOW
 
+For any other doubts, there is a Flow.md file in the main directory, if you wish to check the algorithm flow, step by step.
 
 
 

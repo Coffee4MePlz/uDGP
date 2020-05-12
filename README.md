@@ -12,6 +12,7 @@ This is a result of 2 years of research. 1 and 1/2 years in purely theoretical r
 _____________________________________________________
 _____________________________________________________ 
 
+![](/Prints/20pts.jpg)
 
 ## INTRODUCTION
 
